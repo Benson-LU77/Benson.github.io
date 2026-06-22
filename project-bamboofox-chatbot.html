@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bamboo Fox AI Chatbot — Hong-Qi Lu</title>
+<meta name="description" content="Bamboo Fox AI Chatbot UX case study by Hong-Qi Lu, covering usability testing, five rounds of prompt iteration, error management, and conversational AI design.">
+<meta property="og:title" content="Bamboo Fox AI Chatbot — Hong-Qi Lu">
+<meta property="og:description" content="A UX case study exploring usability testing, prompt iteration, and conversational AI design for a campus culture chatbot.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/bamboofox-chatbot/bamboofox-chatbot-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-name">Hong-Qi Lu</a>
+    <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="projects.html" class="nav-link active" aria-current="page">Projects</a></li>
+      <li><a href="resume.html" class="nav-link">Resume</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Project Header -->
+<header class="site-header compact">
+  <div class="wrap">
+    <a href="projects.html" class="back-link">← Back to Projects</a>
+    <p class="eyebrow">UX CASE STUDY</p>
+    <h1>Bamboo Fox AI Chatbot</h1>
+    <div class="project-meta">
+      <span>Conversational AI × Campus Culture</span>
+      <span>UX Research · Usability Testing · Prompt Iteration · Insight Synthesis</span>
+      <span>Aug 2025 – Dec 2025</span>
+    </div>
+  </div>
+</header>
+
+<!-- Full-width Hero -->
+<section class="project-hero-image">
+  <img
+    src="assets/bamboofox-chatbot/bamboofox-chatbot-cover.png"
+    alt="梅竹賽 Bamboo Fox AI Chatbot 首頁，以竹狐角色與 START 按鈕引導使用者進入對話"
+    width="1562"
+    height="862"
+  >
+</section>
+
+<!-- 1. Project Overview -->
+<section class="case-section">
+  <div class="wrap">
+    <p class="case-label">Project Overview</p>
+    <h2>以對話式體驗連結校園文化與賽事參與</h2>
+    <p>本專案以梅竹賽校園文化為情境，設計一套協助使用者理解賽事、探索文化內容，並進一步參與活動的 AI Chatbot。</p>
+    <p class="paragraph-spaced">研究聚焦於資訊取得、角色一致性、回答準確度與互動引導，並透過使用者測試與五輪 Prompt 迭代，逐步調整 Chatbot 的知識來源、語氣設定與對話邏輯。</p>
+    <div class="meta-grid">
+      <div class="meta-item">
+        <p class="meta-label">Role</p>
+        <p>UX Research · Usability Testing · Prompt Iteration · Insight Synthesis</p>
+      </div>
+      <div class="meta-item">
+        <p class="meta-label">Duration</p>
+        <p>Aug 2025 – Dec 2025</p>
+      </div>
+      <div class="meta-item">
+        <p class="meta-label">Methods</p>
+        <p>Observation · Interview · CUQ · Heuristic Evaluation</p>
+      </div>
+      <div class="meta-item">
+        <p class="meta-label">Tools</p>
+        <p>Figma · Generative AI Platform</p>
+      </div>
+      <div class="meta-item">
+        <p class="meta-label">Project Context</p>
+        <p>Academic team project</p>
+      </div>
+    </div>
+    <div class="contribution-note">
+      <p class="meta-label">My Contribution</p>
+      <p>我參與測試設計、操作觀察與研究結果整理，並根據測試問題，持續迭代 Chatbot 的角色設定、知識來源與回答規則。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Experience Strategy -->
+<section class="case-section">
+  <div class="wrap">
+    <p class="case-label">Experience Strategy</p>
+    <h2>從認識賽事到採取參與行動</h2>
+    <p>Chatbot 以行銷漏斗為基礎，將使用者體驗分為四個階段，讓對話從建立認知逐步發展至實際參與。</p>
+    <figure class="case-image case-image--spaced">
+      <img
+        src="assets/bamboofox-chatbot/bamboofox-experience-strategy.svg"
+        alt="Bamboo Fox AI Chatbot 四階段體驗策略：Cognitive Priming、Context Immersion、Emotional Engagement、Action Readiness"
+        width="1440"
+        height="810"
+        loading="lazy"
+      >
+    </figure>
+    <div class="strategy-tags">
+      <span>Cognitive Priming</span>
+      <span>Context Immersion</span>
+      <span>Emotional Engagement</span>
+      <span>Action Readiness</span>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Research Setup -->
+<section class="case-section">
+  <div class="wrap">
+    <p class="case-label">Research Setup</p>
+    <h2>以情境任務測試五個 Prompt 版本</h2>
+    <p>研究邀請 5 位受試者，包含技術端與一般使用者，依四個體驗階段完成情境任務與延伸追問。</p>
+    <div class="research-stats">
+      <div>
+        <strong>5</strong>
+        <span>Participants</span>
+      </div>
+      <div>
+        <strong>5</strong>
+        <span>Prompt Versions</span>
+      </div>
+      <div>
+        <strong>4</strong>
+        <span>Experience Stages</span>
+      </div>
+      <div>
+        <strong>2 + 2</strong>
+        <span>Main &amp; Follow-up Tasks</span>
+      </div>
+    </div>
+    <div class="research-flow">
+      <span>Preparation</span>
+      <span>Scenario Testing</span>
+      <span>Interview &amp; CUQ</span>
+      <span>Analysis</span>
+      <span>Prompt Iteration</span>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Persona & Customer Journey -->
+<section class="case-section">
+  <div class="wrap">
+    <p class="case-label">Persona &amp; Customer Journey</p>
+    <h2>從使用者輪廓到參與歷程</h2>
+    <p>透過訪談與操作觀察，整理主動型球迷的參與動機、各階段行為與資訊需求，作為 Chatbot 知識架構與對話設計的依據。</p>
+    <div class="analysis-image-list">
+      <figure class="analysis-figure">
+        <img
+          src="assets/bamboofox-chatbot/bamboofox-persona.png"
+          alt="Composite Persona — 主動型球迷，整理參與動機、賽前至賽後行為、感受與資訊痛點（圖為示意人物，非真實受訪者）"
+          loading="lazy"
+        >
+        <figcaption>
+          <strong>Composite Persona</strong>
+          <span>主動型球迷的參與動機、賽前至賽後行為，以及資訊分散與即時內容不足等主要痛點。圖中人物為示意，非真實受訪者。</span>
+        </figcaption>
+      </figure>
+      <figure class="analysis-figure">
+        <img
+          src="assets/bamboofox-chatbot/bamboofox-customer-journey-map.png"
+          alt="主動型球迷從 Awareness、Interest、Consideration、Action 到 Referral 的顧客旅程，包含使用者行為、目標、情緒、痛點及 Chatbot 支援"
+          loading="lazy"
+        >
+        <figcaption>
+          <strong>Customer Journey Map</strong>
+          <span>依認知、興趣、考慮、行動與分享五個階段，整理使用者行為、目標、情緒、痛點及 Chatbot 在各階段可提供的支援。</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Key Findings -->
+<section class="case-section">
+  <div class="wrap">
+    <p class="case-label">Key Findings</p>
+    <h2>測試揭示四個核心問題</h2>
+    <div class="findings-grid findings-grid--four">
+      <article class="finding-card">
+        <span class="finding-num">01</span>
+        <h3>Onboarding Was Unclear</h3>
+        <p>使用者一開始不清楚 Chatbot 的身份、用途與可詢問內容。</p>
+      </article>
+      <article class="finding-card">
+        <span class="finding-num">02</span>
+        <h3>Responses Were Inconsistent</h3>
+        <p>稱謂、回答順序與角色立場不一致，降低回覆可信度。</p>
+      </article>
+      <article class="finding-card">
+        <span class="finding-num">03</span>
+        <h3>Information Was Sometimes Inaccurate</h3>
+        <p>系統可能生成知識庫外資訊，或出現賽程與內容錯配。</p>
+      </article>
+      <article class="finding-card">
+        <span class="finding-num">04</span>
+        <h3>Interaction Feedback Was Limited</h3>
+        <p>缺乏 Loading、Enter 送出、對話記憶與訊息滑動等功能。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Prompt Evolution -->
+<section class="case-section prompt-evolution">
+  <div class="wrap">
+    <p class="case-label">Prompt Evolution</p>
+    <h2>五輪測試如何逐步穩定回覆邏輯</h2>
+    <figure class="case-image case-image--spaced">
+      <img
+        src="assets/bamboofox-chatbot/bamboofox-prompt-evolution.svg"
+        alt="Bamboo Fox AI Chatbot 從 Prompt 1.0 至 Prompt 5.0 的版本演進與每輪主要調整"
+        width="1440"
+        height="810"
+        loading="lazy"
+      >
+    </figure>
+    <div class="version-timeline">
+      <article>
+        <span>V1</span>
+        <h3>Basic Structure</h3>
+        <p>建立角色語氣、任務架構與知識庫內容。</p>
+      </article>
+      <article>
+        <span>V2</span>
+        <h3>Naming Consistency</h3>
+        <p>加入校名、代稱與資訊排序規則。</p>
+      </article>
+      <article>
+        <span>V3</span>
+        <h3>Retrieval Control</h3>
+        <p>限制系統只能依據知識庫內容回覆。</p>
+      </article>
+      <article>
+        <span>V4</span>
+        <h3>Execution Guard</h3>
+        <p>補充內容，加入回答檢查與階段引導。</p>
+      </article>
+      <article>
+        <span>V5</span>
+        <h3>Output &amp; Progression Rules</h3>
+        <p>加入顯示順序、格式規範與階段鎖定。</p>
+      </article>
+    </div>
+    <div class="issue-response-table">
+      <div>
+        <strong>校名與角色立場不一致</strong>
+        <code>global_settings.naming</code>
+      </div>
+      <div>
+        <strong>錯誤或捏造資訊</strong>
+        <code>retrieval · execution_guard</code>
+      </div>
+      <div>
+        <strong>Markdown 與 emoji 顯示錯亂</strong>
+        <code>formatting_rules</code>
+      </div>
+      <div>
+        <strong>對話階段跳脫</strong>
+        <code>phase_progression_lock</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Representative Iterations -->
+<section class="case-section">
+  <div class="wrap">
+    <p class="case-label">Representative Iterations</p>
+    <h2>從測試問題到 Prompt 規則</h2>
+    <div class="iteration-list">
+
+      <article class="iteration-item">
+        <div class="iteration-copy">
+          <p class="iteration-number">01</p>
+          <h3>Personality Consistency</h3>
+          <p class="iteration-label">Finding</p>
+          <p>稱謂與角色立場不一致，同時出現「我們清大」與「我們交大」。</p>
+          <p class="iteration-label">Prompt Response</p>
+          <p>建立校名、代稱與回答順序規則，明確定義角色立場。</p>
+          <p class="iteration-label">Result</p>
+          <p>後期版本中的角色立場與資訊排序更一致。</p>
+        </div>
+      </article>
+
+      <article class="iteration-item">
+        <div class="iteration-copy">
+          <p class="iteration-number">02</p>
+          <h3>Conversation Progression</h3>
+          <p class="iteration-label">Finding</p>
+          <p>回覆會過早結束，或跨越不同體驗階段。</p>
+          <p class="iteration-label">Prompt Response</p>
+          <p>加入階段鎖定規則，每個階段只能引導至下一階段。</p>
+          <p class="iteration-label">Result</p>
+          <p>對話流程在後期測試中更穩定地依序推進。</p>
+        </div>
+        <figure class="case-image case-image--spaced">
+          <img
+            src="assets/bamboofox-chatbot/bamboofox-conversation-progression.svg"
+            alt="Bamboo Fox AI Chatbot 對話階段推進規則與修正前後比較"
+            width="1440"
+            height="810"
+            loading="lazy"
+          >
+        </figure>
+      </article>
+
+      <article class="iteration-item">
+        <div class="iteration-copy">
+          <p class="iteration-number">03</p>
+          <h3>Error Management</h3>
+          <p class="iteration-label">Finding</p>
+          <p>系統可能錯配賽事資訊，或生成知識庫中不存在的內容。</p>
+          <p class="iteration-label">Prompt Response</p>
+          <p>限制回覆來源，查無資料時需明確拒答，不得自行推測。</p>
+          <p class="iteration-label">Result</p>
+          <p>知識庫外問題的處理方式更一致，虛構內容明顯減少。</p>
+        </div>
+        <figure class="case-image case-image--spaced">
+          <img
+            src="assets/bamboofox-chatbot/bamboofox-error-management.svg"
+            alt="Bamboo Fox AI Chatbot 錯誤生成與輸出格式修正規則"
+            width="1440"
+            height="810"
+            loading="lazy"
+          >
+        </figure>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 8. Solution Summary -->
+<section class="case-section solution-summary">
+  <div class="wrap">
+    <p class="case-label">Solution Summary</p>
+    <h2>從分散問題建立可控制的對話規則</h2>
+    <p>五輪測試將使用者回饋轉化為角色設定、資訊檢索、格式控制與階段推進規則，使 Chatbot 的回答立場、資訊來源與互動順序逐步穩定。</p>
+    <figure class="case-image case-image--spaced">
+      <img
+        src="assets/bamboofox-chatbot/bamboofox-evaluation-summary.svg"
+        alt="Bamboo Fox AI Chatbot 評估摘要：整理每輪 Prompt 修正方向、主要問題對應規則與最終評估結果"
+        width="1440"
+        height="810"
+        loading="lazy"
+      >
+    </figure>
+  </div>
+</section>
+
+<!-- 9. Refined Interaction -->
+<section class="case-section refined-interaction">
+  <div class="wrap">
+    <p class="case-label">Refined Interaction</p>
+    <h2>將測試結果轉化為更清楚的互動引導</h2>
+    <p>測試後的介面透過明確入口選擇、預設問題與開場介紹，協助使用者理解 Chatbot 的服務範圍，降低開始互動時的不確定感。</p>
+
+    <div class="interaction-sequence">
+
+      <figure class="interaction-figure interaction-figure--full">
+        <img
+          src="assets/bamboofox-chatbot/bamboofox-entry-selection.png"
+          alt="Bamboo Fox AI Chatbot 入口選擇畫面，提供梅竹賽與梅竹籃球賽兩種進入選項"
+          width="1194"
+          height="672"
+          loading="lazy"
+        >
+        <figcaption>
+          <strong>01 Entry Selection</strong>
+          <span>先讓使用者選擇內容範圍，降低不同賽事資訊混在同一層級的問題。</span>
+        </figcaption>
+      </figure>
+
+      <div class="guided-onboarding-pair">
+        <figure class="interaction-figure">
+          <img
+            src="assets/bamboofox-chatbot/bamboofox-guided-questions.png"
+            alt="Bamboo Fox AI Chatbot 對話首頁，提供梅竹賽歷史、賽程與票券等預設問題"
+            width="1542"
+            height="896"
+            loading="lazy"
+          >
+          <figcaption>
+            <strong>02a Guided Questions</strong>
+            <span>以預設問題呈現可詢問內容，回應使用者不清楚如何開始互動的問題。</span>
+          </figcaption>
+        </figure>
+        <figure class="interaction-figure">
+          <img
+            src="assets/bamboofox-chatbot/bamboofox-onboarding-response.png"
+            alt="Bamboo Fox AI Chatbot 開場介紹，說明角色身份、服務內容與建議詢問方式"
+            width="1542"
+            height="896"
+            loading="lazy"
+          >
+          <figcaption>
+            <strong>02b Onboarding Response</strong>
+            <span>角色自我介紹說明服務範圍，讓使用者快速理解可詢問的內容與下一步。</span>
+          </figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 10. Results -->
+<section class="case-section">
+  <div class="wrap">
+    <p class="case-label">Results</p>
+    <h2>測試結果與尚待改善的問題</h2>
+    <div class="result-stats">
+      <div>
+        <strong>80.6</strong>
+        <span>CUQ Mean</span>
+      </div>
+      <div>
+        <strong>64</strong>
+        <span>Minimum</span>
+      </div>
+      <div>
+        <strong>90.6</strong>
+        <span>Maximum</span>
+      </div>
+    </div>
+    <p class="cuq-context">五個測試版本的 CUQ 平均分數為 80.6，最低 64，最高 90.6。</p>
+    <figure class="case-image case-image--spaced">
+      <img
+        src="assets/bamboofox-chatbot/bamboofox-usability-results.svg"
+        alt="Bamboo Fox AI Chatbot 在四個體驗階段中的 Effectiveness、Efficiency、Learnability 與 Error Tolerance 評估結果"
+        width="1440"
+        height="810"
+        loading="lazy"
+      >
+    </figure>
+    <div class="case-grid case-grid--equal results-grid">
+      <div>
+        <h3>What Improved</h3>
+        <ul>
+          <li>角色語氣與立場更一致</li>
+          <li>回答內容與知識庫來源更穩定</li>
+          <li>對話階段與引導順序更清楚</li>
+          <li>錯字辨識與基本任務完成表現良好</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What Remained Limited</h3>
+        <ul>
+          <li>使用者仍不容易立即理解 Chatbot 用途</li>
+          <li>回答長度與精簡度仍需調整</li>
+          <li>系統缺乏對話記憶</li>
+          <li>部分介面問題無法透過 Prompt 解決</li>
+        </ul>
+      </div>
+    </div>
+    <p class="paragraph-spaced result-note">在本次小樣本測試中，部分受試者於體驗後表達更高的賽事參與意願；此結果僅作為探索性觀察。</p>
+  </div>
+</section>
+
+<!-- 11. Prototype Limitations -->
+<section class="case-section">
+  <div class="wrap">
+    <p class="case-label">Prototype Limitations</p>
+    <h2>不是所有問題都能透過 Prompt 解決</h2>
+    <p>部分問題屬於前端與系統層限制，包括 Loading feedback、Enter 送出、對話記憶、訊息滑動、文字框自動調整，以及圖片與表格支援。</p>
+    <p class="paragraph-spaced">後續優化需要同時處理 AI 回覆邏輯與介面互動，而不是只調整 Prompt。</p>
+  </div>
+</section>
+
+<!-- 12. Reflection -->
+<section class="case-section">
+  <div class="wrap">
+    <p class="case-label">Reflection</p>
+    <h2>Conversational AI 同時是內容與介面問題</h2>
+    <p>這個專案讓我理解，Conversational AI 的體驗不只取決於回答是否正確，也受到角色立場、資訊來源、回答順序與互動回饋影響。</p>
+    <p class="paragraph-spaced">Prompt 可以改善內容、語氣與對話邏輯，但無法取代前端回饋、對話記憶與系統功能。後續設計需要同時處理 AI 行為與介面體驗。</p>
+  </div>
+</section>
+
+<!-- Previous / Next Project -->
+<div class="project-nav-footer">
+  <div class="wrap">
+    <a href="project-kkday.html">← Previous: KKday</a>
+    <a href="project-enigma.html">Next: The Enigma of Bamboo Fox →</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-label">Email</p>
+        <a href="mailto:keepitupluhongqi@gmail.com">keepitupluhongqi@gmail.com</a>
+      </div>
+      <div>
+        <p class="footer-label">Portfolio</p>
+        <a href="https://www.behance.net/gallery/245533951/BENSON_PORTFOLIO" target="_blank" rel="noopener">Behance</a>
+      </div>
+      <div>
+        <p class="footer-label">Location</p>
+        <p>Based in Taiwan</p>
+      </div>
+    </div>
+    <p class="footer-note">© 2026 Hong-Qi Lu</p>
+  </div>
+</footer>
+
+</body>
+</html>
